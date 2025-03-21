@@ -422,9 +422,10 @@ class Device:
             
         elif self.device_type=='fans':
             GPIO.setup(22,GPIO.OUT)
-            
-            
-        
+        '''    
+        elif self.device_type=='fire_water':
+            GPIO.setup(21,GPIO.OUT)
+        '''
             
         
         
@@ -466,7 +467,9 @@ a1.name
 A1=Device('home/living_room/lamps/lamp22')
 
 A1.turn_on()
-
+'''
+A2=Device('home/living_room/fire_water/FW1')
+''' 
 '''
 
 DEVICE-->KETABKHOONE
