@@ -748,7 +748,7 @@ class AdminPanel:
     def add_device_to_group(self,group_name,device):
         if group_name in self.groups:
             self.groups[group_name].append(device)
-            
+            print(f'{device} was added to {group_name}')
            
         else:
             print(f'Group {group_name} does not exist')
@@ -763,7 +763,7 @@ class AdminPanel:
             topic=f'home/{group_name}/{device_type}/{name}'
             new_device=Device(topic)
             self.add_device_to_group(group_name, new_device)
-            
+             print(f'device {new_device} was created')
             
         else:
             print(f'Group {group_name} does not exist')
@@ -826,7 +826,7 @@ class AdminPanel:
         
         if group_name not in self.groups:
             self.groups[group_name]=[]
-            print(f'groups {group_name} created')
+            print(f'groups{group_name} was created')
             #logg mimone
         else:
             print('yout group name is duplicated name')
@@ -834,7 +834,7 @@ class AdminPanel:
     def add_device_to_group(self,group_name,device):
         if group_name in self.groups:
             self.groups[group_name].append(device)
-            
+            print(f'Device {device} was added to group {group_name}')
            
         else:
             print(f'Group {group_name} does not exist')
@@ -849,7 +849,7 @@ class AdminPanel:
             topic=f'home/{group_name}/{device_type}/{name}'
             new_device=Device(topic)
             self.add_device_to_group(group_name, new_device)
-            
+            print(f'Device {new_device} was created')
             
         else:
             print(f'Group {group_name} does not exist')
@@ -866,6 +866,8 @@ class AdminPanel:
                 new_device=Device(topic)
                 
                 self.add_device_to_group(group_name, new_device)
+                
+            print(f'{number_of_devices} of {evice_type} were created in group{group_name}')
             
             
         else:
@@ -908,7 +910,7 @@ class AdminPanel:
     def add_device_to_group(self,group_name,device):
         if group_name in self.groups:
             self.groups[group_name].append(device)
-            
+            print(f'Device {device} was added to group {group_name}')
            
         else:
             print(f'Group {group_name} does not exist')
@@ -923,7 +925,7 @@ class AdminPanel:
             topic=f'home/{group_name}/{device_type}/{name}'
             new_device=Device(topic)
             self.add_device_to_group(group_name, new_device)
-            
+            print(f'Device {new_device} was created')
             
         else:
             print(f'Group {group_name} does not exist')
@@ -940,6 +942,8 @@ class AdminPanel:
                 new_device=Device(topic)
                 
                 self.add_device_to_group(group_name, new_device)
+
+            print(f'{number_of_devices} of {evice_type} were created in group{group_name}')
             
             
         else:
